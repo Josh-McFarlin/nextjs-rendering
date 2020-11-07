@@ -1,7 +1,5 @@
-export const fetchCars = async (onClient = true) => {
-  const response = await fetch(
-    `${!onClient ? "http://localhost:3000" : ""}/api/fakeCars`
-  );
+export const fetchCars = async (localUrl = "") => {
+  const response = await fetch(`${localUrl}/api/fakeCars`);
 
   return response.json();
 };

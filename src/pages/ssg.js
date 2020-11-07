@@ -1,5 +1,5 @@
 import Car from "../components/Car";
-import { fetchCars } from "../actions/api";
+import fetchCars from "./api/fakeCars";
 
 const SSGPage = ({ data }) => (
   <>
@@ -29,13 +29,15 @@ const SSGPage = ({ data }) => (
 );
 
 export async function getStaticProps(context) {
-  const data = await fetchCars(false);
+  const data = await new Promise((resolve) =>
+    fetchCars(null, { json: (input) => resolve(input) })
+  );
 
   /*
-   * This is actually an anti-pattern!
-   * If using local data/functions, you should use them directly
-   * within this method instead of calling an API route.
-   * This page is only calling the API for consistency across pages.
+   * When using getStaticProps, local API routes cannot be used
+   * because the server is not running during static generation.
+   * We can get around this by calling the API handler directly
+   * with mocked server routing.
    */
 
   return {

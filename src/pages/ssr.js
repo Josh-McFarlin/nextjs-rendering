@@ -27,8 +27,8 @@ const SSRPage = ({ data }) => (
   </>
 );
 
-export async function getServerSideProps(context) {
-  const data = await fetchCars(false);
+export async function getServerSideProps({ req }) {
+  const data = await fetchCars(`http://${req.headers.host}`);
 
   return {
     props: {
