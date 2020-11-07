@@ -9,6 +9,9 @@ const SSGPage = ({ data }) => (
         All data is being fetched a single time on the server and displayed to
         all clients
       </h4>
+      <h4 className="description">
+        (Notice the date when data was generated never changes)
+      </h4>
       <a
         className="link"
         href="https://github.com/Josh-McFarlin/nextjs-rendering/blob/main/src/pages/ssg.js"

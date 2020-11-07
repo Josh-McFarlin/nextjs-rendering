@@ -15,6 +15,8 @@ An example application showing different rendering methods with Next.js.
 
 This app can be previewed and edited at [this CodeSandbox](https://codesandbox.io/s/github/Josh-McFarlin/nextjs-rendering)
 
+A production version of the app is [hosted on Vercel](https://nextjs-rendering.vercel.app/)
+
 ## Running
 
 ### Development

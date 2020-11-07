@@ -60,15 +60,17 @@ body,
 }
 
 .type > .title {
+  font-weight: bold;
   margin: 0 0 12px;
 }
 
 .type > .description {
+  font-weight: normal;
   margin: 0 0 8px;
 }
 
 .type > .hint {
-  font-weight: 400;
+  font-weight: normal;
   margin: 0 0 8px;
   color: #969696;
 }

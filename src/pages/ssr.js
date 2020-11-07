@@ -8,6 +8,9 @@ const SSRPage = ({ data }) => (
       <h4 className="description">
         All data is being fetched on the server for each unique request
       </h4>
+      <h4 className="description">
+        (Notice the changing date of when the data was generated)
+      </h4>
       <a
         className="link"
         href="https://github.com/Josh-McFarlin/nextjs-rendering/blob/main/src/pages/ssr.js"
