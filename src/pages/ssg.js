@@ -3,16 +3,28 @@ import { fetchCars } from "../actions/api";
 
 const SSGPage = ({ data }) => (
   <>
-    <h3 className="type-title">Static-Site Generation</h3>
-    <h4 className="type-description">
-      All data is being generated a single time on the server and turned into
-      static HTML
-    </h4>
+    <div className="type">
+      <h3 className="title">Static-Site Generation</h3>
+      <h4 className="description">
+        All data is being fetched a single time on the server and displayed to
+        all clients
+      </h4>
+      <a
+        className="link"
+        href="https://github.com/Josh-McFarlin/nextjs-rendering/blob/main/src/pages/ssg.js"
+      >
+        View the source here
+      </a>
+    </div>
     <br />
-    <p>Data Generated: {new Date(data.date).toLocaleString()}</p>
-    {data.cars.map((car) => (
-      <Car key={car.vin} {...car} />
-    ))}
+    <div className="type">
+      <p className="title">
+        Data Generated: {new Date(data.date).toLocaleString()}
+      </p>
+      {data.cars.map((car) => (
+        <Car key={car.vin} {...car} />
+      ))}
+    </div>
   </>
 );
 
@@ -28,8 +40,8 @@ export async function getStaticProps(context) {
 
   return {
     props: {
-      data
-    }
+      data,
+    },
   };
 }
 

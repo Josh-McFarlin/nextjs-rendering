@@ -50,18 +50,34 @@ body,
   overflow-y: auto;
 }
 
-.app > .content > .type-title {
-  font-size: 20px;
+.content > .type {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+.type > .title {
   margin: 0 0 12px;
 }
 
-.app > .content > .type-description {
-  font-size: 16px;
-  margin: 0 0 4px;
+.type > .description {
+  margin: 0 0 8px;
 }
 
-.app > .content > .type-hint {
-  font-size: 15px;
-  margin: 0 0 4px;
+.type > .hint {
+  font-weight: 400;
+  margin: 0 0 8px;
   color: #969696;
+}
+
+.type > .link {
+  font-size: 12px;
+}
+
+.type > .loading {
+  text-align: center;
+  margin: 8px 0;
 }

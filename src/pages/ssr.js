@@ -3,16 +3,27 @@ import { fetchCars } from "../actions/api";
 
 const SSRPage = ({ data }) => (
   <>
-    <h3 className="type-title">Server-Side Rendering</h3>
-    <h4 className="type-description">
-      The page is being uniquely generated for each visitor on the server before
-      sending the HTML and JavaScript to the client.
-    </h4>
+    <div className="type">
+      <h3 className="title">Server-Side Rendering</h3>
+      <h4 className="description">
+        All data is being fetched on the server for each unique request
+      </h4>
+      <a
+        className="link"
+        href="https://github.com/Josh-McFarlin/nextjs-rendering/blob/main/src/pages/ssr.js"
+      >
+        View the source here
+      </a>
+    </div>
     <br />
-    <p>Data Generated: {new Date(data.date).toLocaleString()}</p>
-    {data.cars.map((car) => (
-      <Car key={car.vin} {...car} />
-    ))}
+    <div className="type">
+      <p className="title">
+        Data Generated: {new Date(data.date).toLocaleString()}
+      </p>
+      {data.cars.map((car) => (
+        <Car key={car.vin} {...car} />
+      ))}
+    </div>
   </>
 );
 
@@ -21,8 +32,8 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      data
-    }
+      data,
+    },
   };
 }
 

@@ -11,27 +11,38 @@ const CSRPage = () => {
 
   return (
     <>
-      <h3 className="type-title">Client-Side Rendering</h3>
-      <h4 className="type-description">
-        The page is being uniquely generated for each visitor on the server
-        before sending the HTML and JavaScript to the client.
-      </h4>
-      <p className="type-hint">
-        (Technically this page is SSG while fetching data once loaded on the
-        client, meaning the flash of data is identical to CSR, but the initial
-        page render is faster than true CSR)
-      </p>
+      <div className="type">
+        <h3 className="title">Client-Side Rendering</h3>
+        <h4 className="description">
+          All data fetching occurs directly on the client
+        </h4>
+        <h5 className="hint">
+          (Technically this page is SSG and fetching data once loaded on the
+          client, meaning the flash of data is identical to CSR, but the initial
+          page render is faster than true CSR)
+        </h5>
+        <a
+          className="link"
+          href="https://github.com/Josh-McFarlin/nextjs-rendering/blob/main/src/pages/csr.js"
+        >
+          View the source here
+        </a>
+      </div>
       <br />
-      {data == null ? (
-        <p>Loading...</p>
-      ) : (
-        <>
-          <p>Data Generated: {new Date(data.date).toLocaleString()}</p>
-          {data.cars.map((car) => (
-            <Car key={car.vin} {...car} />
-          ))}
-        </>
-      )}
+      <div className="type">
+        {data == null ? (
+          <p className="loading">Loading...</p>
+        ) : (
+          <>
+            <p className="title">
+              Data Generated: {new Date(data.date).toLocaleString()}
+            </p>
+            {data.cars.map((car) => (
+              <Car key={car.vin} {...car} />
+            ))}
+          </>
+        )}
+      </div>
     </>
   );
 };
