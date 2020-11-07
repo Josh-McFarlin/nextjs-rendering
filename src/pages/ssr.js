@@ -28,7 +28,7 @@ const SSRPage = ({ data }) => (
 );
 
 export async function getServerSideProps(context) {
-  const data = await fetchCars();
+  const data = await fetchCars(false);
 
   return {
     props: {

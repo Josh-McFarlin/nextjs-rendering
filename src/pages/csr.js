@@ -6,7 +6,7 @@ const CSRPage = () => {
   const [data, setData] = React.useState(null);
 
   React.useEffect(() => {
-    fetchCars().then((newData) => setData(newData));
+    fetchCars(true).then((newData) => setData(newData));
   }, []);
 
   return (

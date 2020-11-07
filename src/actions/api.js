@@ -1,8 +1,6 @@
-export const fetchCars = async () => {
+export const fetchCars = async (onClient = true) => {
   const response = await fetch(
-    `${
-      typeof window === "undefined" ? "http://localhost:3000" : ""
-    }/api/fakeCars`
+    `${!onClient ? "http://localhost:3000" : ""}/api/fakeCars`
   );
 
   return response.json();

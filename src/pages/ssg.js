@@ -29,7 +29,7 @@ const SSGPage = ({ data }) => (
 );
 
 export async function getStaticProps(context) {
-  const data = await fetchCars();
+  const data = await fetchCars(false);
 
   /*
    * This is actually an anti-pattern!
