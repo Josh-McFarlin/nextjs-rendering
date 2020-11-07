@@ -1,0 +1,67 @@
+html,
+body,
+#__next {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: "Arial", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.app > .navbar {
+  width: 100%;
+  display: flex;
+  background: rgb(36, 36, 36);
+}
+
+.app > .navbar > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 16px;
+  text-align: center;
+  background: rgb(36, 36, 36);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.app > .navbar > a:hover {
+  background: rgb(20, 20, 20);
+}
+
+.app > .content {
+  height: 100%;
+  padding: 16px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.app > .content > .type-title {
+  font-size: 20px;
+  margin: 0 0 12px;
+}
+
+.app > .content > .type-description {
+  font-size: 16px;
+  margin: 0 0 4px;
+}
+
+.app > .content > .type-hint {
+  font-size: 15px;
+  margin: 0 0 4px;
+  color: #969696;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "nextjs-rendering",
+  "description": "An example application showing different rendering methods with Next.js",
+  "version": "1.0.0",
+  "author": "Josh McFarlin <josh@mcfarl.in>",
+  "license": "MIT",
+  "homepage": "https://github.com/Josh-McFarlin/nextjs-rendering#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Josh-McFarlin/nextjs-rendering.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Josh-McFarlin/nextjs-rendering/issues"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "faker": "5.1.0",
+    "next": "10.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
